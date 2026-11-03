@@ -1,0 +1,9 @@
+project: savantenvs/etterna
+target: fuzz_msdfile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_msdfile/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_msdfile
+    libfuzzer: true
+    timeout: 5

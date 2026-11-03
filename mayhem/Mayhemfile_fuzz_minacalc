@@ -1,0 +1,9 @@
+project: savantenvs/etterna
+target: fuzz_minacalc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_minacalc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_minacalc
+    libfuzzer: true
+    timeout: 5
